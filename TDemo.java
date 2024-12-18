@@ -80,6 +80,12 @@ public class TDemo {
 		System.out.println("\n\nТокенизация при помощи класca StreamTokenizer");
                 usingStreamTokenizerClass();
 
+
+		//Токенизация при помощи класса StringTokenizer
+		System.out.println("\n\nТокенизация при помощи класca StringTokenizer");
+		usingTheStringTokenizerClass();
+
+
 	}
 
 	private static void usingTheScannerClass(){
@@ -146,6 +152,14 @@ public class TDemo {
 		} catch (IOException ex){
 			ex.printStackTrace();
 		}
+	
+	}
 
+	private static void usingTheStringTokenizerClass(){
+		StringTokenizer st = new StringTokenizer(paragraph);
+		while (st.hasMoreTokens()){
+			System.out.println(st.nextToken());
+		}
+			
 	}	
 }
